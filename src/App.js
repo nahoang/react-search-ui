@@ -1,11 +1,12 @@
 import './App.css';
 import './styles/styles.scss'
-import SearchBox from './SearchBox'
+
+import Search from './containers/Search'
 
 function App() {
   return (
     <div className="App">
-      <SearchBox />
+      <Search />
     </div>
   );
 }

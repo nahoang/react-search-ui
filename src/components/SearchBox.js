@@ -10,6 +10,7 @@ const SearchBox = (props) => {
       <div className="search-box">
         <InputView
           className="searchbox__text-input"
+          placeholder="Search"
         />
       </div>
     </form>
