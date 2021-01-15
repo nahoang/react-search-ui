@@ -1,12 +1,14 @@
 import React from 'react'
 
-const SearchInput = () => {
+const SearchInput = (props) => {
+  const { ...rest } = props
   return (
     <>
-      <div>
-        <input />
+      <div className="search-box__wrapper">
+        <input
+          {...rest}
+        />
       </div>
-   
     </>
   )
 }
