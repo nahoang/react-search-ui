@@ -11,9 +11,7 @@ const Layout = (props) => {
       </div>
       <div className="layout-body">
         <div className="layout-body__inner">
-          <LayoutSidebar className="layout-sidebar">
-            Sidebar here!
-          </LayoutSidebar>
+          
           <div className="layout-main">
             <div className="layout-main-header">
               <div className="layout-main-header__inner">Search Box</div>

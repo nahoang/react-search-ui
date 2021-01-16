@@ -6,7 +6,9 @@ import Layout from '../components/Layout';
 const Search = () => {
   return (
     <Layout>
-      <SearchBox />
+      <SearchBox 
+        onSubmit={(e) => console.log(e.target.value)}
+      />
     </Layout>
     
   )

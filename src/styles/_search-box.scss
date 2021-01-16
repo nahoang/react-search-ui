@@ -4,11 +4,29 @@
   justify-content: center;
   align-items: stretch;
 
+  &__submit {
+    flex-shrink: 0;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 16px;
+    margin-left: 10px;
+    border: none;
+    text-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+    background: linear-gradient(rgb(45, 160, 250), rgb(49, 88, 238))
+      rgb(47, 124, 244);
+      cursor: pointer;
+      border-radius: 4px;
+  }
+
   &__wrapper {
     width: 100%;
     height: 100%;
     display: flex;
     border-radius: 3px;
+    flex-direction: column;
+    outline: none;
+    align-items: stretch;
+    position: relative;
   }
 
   &__text-input {

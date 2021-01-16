@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SearchInput = (props) => {
-  const { ...rest } = props
+  const { buttonProps, ...rest } = props
   return (
     <>
       <div className="search-box__wrapper">
@@ -9,6 +9,7 @@ const SearchInput = (props) => {
           {...rest}
         />
       </div>
+      <input {...buttonProps} />
     </>
   )
 }
