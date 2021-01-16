@@ -11,17 +11,14 @@ export const _get= () => {
 
 const request = async (params) => {
   const { method, val } = params;
-  const headers = new Headers({
-    "Content-Type": "application/json",
-    "Access-Control-Allow-Headers" : "Content-Type",
-    "Access-Control-Allow-Origin": "*",
-  });
 
   const response = await fetch(
     `https://hn.algolia.com/api/v1/search?query=${val}`,
     {
       method,
-      headers
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Headers" : "Content-Type",
+      "Access-Control-Allow-Origin": "*",
     }
   )
 
@@ -40,10 +37,9 @@ const request = async (params) => {
 }
 
 export const doSearch = (text) => {
-  console.log(text)
   const params = {
     method: "GET",
     val: text
   }
-  request(params).then(json => console.log('json', json))
+  return request(params);
 }

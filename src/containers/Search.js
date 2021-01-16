@@ -7,7 +7,9 @@ import { doSearch } from '../libs/api';
 
 const Search = () => {
   const onSearch = (text) => {
-    doSearch(text);
+    doSearch(text).then(json => {
+      console.log('json', json);
+    });
   }
   return (
     <Layout
