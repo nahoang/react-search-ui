@@ -1,14 +1,23 @@
 import React from "react";
 
-const Results = (props) => {
-  const { children, ...rest } = props;
+import Result from './Result';
 
+const Results = (props) => {
+  const { 
+    results,
+    titleField, ...rest } = props;
+    console.log('results', results)
   return (
     <ul
       className="results-container"
       {...rest}
     >
-      {children}
+      {results.map(result => (
+        <Result
+          result={result}
+       />
+      ))}
+     
     </ul>
   )
 }

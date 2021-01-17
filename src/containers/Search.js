@@ -6,14 +6,19 @@ import Results from '../components/Results';
 import { doSearch } from '../libs/api';
 
 const Search = () => {
+  const [items, setItems] = React.useState([])
   const onSearch = (text) => {
     doSearch(text).then(json => {
       console.log('json', json);
+      setItems(json.hits)
     });
   }
   return (
     <Layout
-      bodyContent={<Results titleField="title" urlField="link" />}
+      bodyContent={
+      <Results titleField="title" urlField="link" 
+        results={items}
+      />}
     >
       <SearchBox 
         onSubmit={(text) => {

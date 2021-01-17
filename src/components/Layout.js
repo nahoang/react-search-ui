@@ -17,7 +17,10 @@ const Layout = (props) => {
               <div className="layout-main-header__inner">Search Box</div>
             </div>
             <div className="layout-main-body">
-              {children || bodyContent}
+              {children}
+            </div>
+            <div>
+            {bodyContent}
             </div>
             <div className="layout-main-footer">
               Footer
