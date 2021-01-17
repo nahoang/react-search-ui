@@ -6,7 +6,6 @@ const Results = (props) => {
   const { 
     results,
     titleField, ...rest } = props;
-    console.log('results', results)
   return (
     <ul
       className="results-container"

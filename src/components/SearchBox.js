@@ -12,6 +12,7 @@ const SearchBox = (props) => {
         e.preventDefault();
         onSubmit(text);
       }}
+      className="form-search"
     >
       <div className="search-box">
         <InputView

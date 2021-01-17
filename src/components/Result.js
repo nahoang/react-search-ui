@@ -11,7 +11,11 @@ const Result = (props) => {
   return (
     <li className="result" {...rest}>
       <div className="result__header">
-        {title && (
+      </div>
+      <div
+        className="result__body"
+      >
+      {title && (
           <a
             className="result__title result__title-link" 
             dangerouslySetInnerHTML={{ __html: title }}
@@ -19,17 +23,7 @@ const Result = (props) => {
             target="_blank"
           />
         )}
-      </div>
-      <div
-        className="result__body"
-      >
-        <ul>
-          <li>
-            <span>Title: {title} - </span>
-            <span>Author: {author}</span>
-          </li>
-        </ul>
-
+        <span> {author}</span>
       </div>
     </li>
   )

@@ -9,7 +9,6 @@ const Search = () => {
   const [items, setItems] = React.useState([])
   const onSearch = (text) => {
     doSearch(text).then(json => {
-      console.log('json', json);
       setItems(json.hits)
     });
   }
