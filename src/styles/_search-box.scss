@@ -42,6 +42,8 @@
       box-shadow: rgba(59, 69, 79, 0.3) 0px 2px 4px;
       border: 1px solid $linkColor;
     }
+
+   
   }
 }
 
@@ -64,5 +66,31 @@
     display: flex;
 
     
+  }
+
+  &__autocomplete-container {
+    display: none;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    top: 110%;
+    margin: 0;
+    line-height: 1.5;
+    position: absolute;
+
+    .autocomplete & {
+      display: flex;
+      z-index: 1;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+
+    }
+
+    li {
+      color: #555;
+    }
   }
 }
